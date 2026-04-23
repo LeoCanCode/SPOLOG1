@@ -1,0 +1,40 @@
+#include <stdio.h>
+int main() {
+float G, A, valor;
+int Litros, resp;
+G = 7.30;
+A = 4.90;
+printf("--------------------------------------------------------\n");
+printf("Álcool até 20 litros, desconto de 3%% por litro\n");
+printf("Álcool acima de 20 litros, desconto de 5%% por litro\n");
+printf("Gasolina até 20 litros, desconto de 4%% por litro\n");
+printf("Gasolina acima de 20 litros, desconto de 6%% por litro\n");
+printf("--------------------------------------------------------\n");
+printf("\n");
+printf("Digite a quantidade de litros que você deseja: ");
+scanf("%i", &Litros);
+printf("Escolha o tipo de combustível: \n");
+printf("[1] - Álcool\n");
+printf("[2] - Gasolina\n");
+scanf("%i", &resp);
+if (resp == 1) {
+ if (Litros <= 20) {
+ valor = (A - (A * 0.03)) * Litros;
+ }else{
+ valor = (A - (A * 0.05)) * Litros;
+ }
+printf("Você abasteceu %i litros de combustivel.\n", Litros);
+printf("O valor e de: %.2f\n", valor);
+}else if (resp == 2) {
+ if (Litros <= 20) {
+ valor = (G - (G * 0.04)) * Litros;
+ }else{
+ valor = (G - (G * 0.06)) * Litros;
+ }
+printf("Você abasteceu %i litros de combustivel.\n", Litros);
+printf("O valor e de: %.2f\n", valor);
+}else{
+printf("Valor invalido.\n");
+}
+return (0);
+}
