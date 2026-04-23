@@ -1,0 +1,17 @@
+main()
+{
+float horas, valor, bruto, inss, liquido;
+printf("--------------------------\n");
+printf("Cálculo de Salário Líquido\n");
+printf("--------------------------\n");
+printf("\n");
+printf("Horas trabalhadas..........: ");
+scanf("%f", &horas);
+printf("Valor da hora tabalhada....: ");
+scanf("%f", &valor);
+bruto = horas * valor;
+inss = bruto * 0.08;
+liquido = bruto - inss;
+printf("Valor do desconto INSS (8%).: %.2f\n", inss);
+printf("Salário líquido............: %.2f\n", liquido);
+}
