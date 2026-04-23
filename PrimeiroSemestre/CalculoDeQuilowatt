@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+float salMin, qw, qwPreco, val, valDesc, valAcr;
+printf("Digite o salario minimo atual: ");
+scanf("%f", &salMin);
+printf("Digite a quantidade de quilowatt utilizada na sua residencia: ");
+scanf("%f", &qw);
+qwPreco = salMin/1000;
+val = qwPreco * qw;
+valDesc = val - (val*0.08);
+valAcr = val + (val*0.10);
+printf("Cada quilowatt vale: R$%.2f\n", qwPreco);
+printf("O valor a ser pago pela residencia e: R$%.2f\n", val);
+printf("Valor a ser pago com desconto (8 por cento): R$%.2f\n", valDesc);
+printf("Valor a ser pago com acrescimo (10 por cento): R$%.2f\n", valAcr);
+}
