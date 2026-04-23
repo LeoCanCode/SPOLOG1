@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+int pesoKG, pesoG, pesoQuinz;
+printf("Digite seu peso (KG)): ");
+scanf("%i", &pesoKG);
+pesoG = (float)pesoKG * 1000;
+pesoQuinz = (float)pesoG + (pesoG * 0.15);
+printf("Seu peso em gramas é: %i gramas.\n", pesoG);
+printf("Seu peso caso você engordasse 15 por cento seria: %i gramas.",
+pesoQ
